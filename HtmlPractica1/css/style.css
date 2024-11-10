@@ -72,22 +72,67 @@ textarea {
 .clearfix::after {
   clear: both;
 }
+
+/* Estilos del Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5bc85b;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.nombresHeader h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Estilos del Footer */
+.footer {
+  background-color: #65cc65;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  /* Ajustes de estilo para dispositivos de mayor ancho */
 }
+
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+
 }
+
 @media print {
   *,
   *::before,
   *::after {
     background: #fff !important;
     color: #000 !important;
-    /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -113,7 +158,6 @@ textarea {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   tr,
   img {
     page-break-inside: avoid;
@@ -129,4 +173,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
