@@ -84,40 +84,36 @@ textarea {
   font-family: 'Roboto', sans-serif;
 }
 
-.header h1 {
-  font-size: 24px;
-  margin: 0;
+.nombresHeader {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto;
 }
 
-.nombresHeader h2 {
-  font-size: 24px;
+.nombresHeader h2, .nombresHeader h1 {
+  margin: 0;
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+
+.header h1 {
+  font-size: 1.2em;
   margin: 0;
 }
 
 /* Estilos del Footer */
 .footer {
-  background-color: #65cc65;
-  color: white;
+  background-color: #5bc85b;
   padding: 10px;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-.footer a {
   color: white;
-  text-decoration: none;
-  margin: 0 5px;
+  text-align: center;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-}
 
 
 @media only screen and (min-width: 35em) {
-  /* Ajustes de estilo para dispositivos de mayor ancho */
+
 }
 
 @media print,
