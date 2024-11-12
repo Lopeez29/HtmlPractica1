@@ -42,7 +42,31 @@
   font-size: 1.2em;
   margin: 0;
 }
+/*Body del medio*/
+/* Aplicando el modelo de cajas busco patrones para ordenar el body*/
+/* Ajustamos el contenido de la pagina*/
+.contenidoPagina {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px;
+}
+/* Ajustamos el contenido del texto principal*/
+.textoPrincipal {
+  font-family: Roboto, sans-serif;
+  margin: 8px;
+  padding: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*margen entre parrafos*/
+.textoPrincipal p {
+  margin: 0 auto;
 
+}
 /*menu izquierdo*/
 .menuIzq {
   width: 20%;
@@ -61,6 +85,7 @@
   text-align: center;
   transition: background-color 0.3s ease;
   position: relative;
+  font-family: Calibri, sans-serif;
 
 }
 
@@ -72,6 +97,7 @@
   text-decoration: none;
   position: absolute;
   inset: 0;
+
 }
 
 
