@@ -56,9 +56,8 @@
 /* Ajustamos el contenido del texto principal*/
 .textoPrincipal {
   font-family: Roboto, sans-serif;
-  margin: 8px;
   padding: 10px;
-  width: 400px;
+  width: 670px;
   display: flex;
   flex-direction: column;
   align-items: center;
