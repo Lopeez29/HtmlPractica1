@@ -1,0 +1,154 @@
+/* Ajustamos el contenido de la página principal */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.main-container {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos del Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5bc85b;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nombresHeader {
+  display: flex;
+  justify-content: center;
+  gap: 90vh; /*margen de separacion horizontal*/
+
+}
+
+.nombresHeader h2, .nombresHeader h1 {
+  margin: 0;
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+
+.header h1 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Estilos del Footer */
+.footer {
+  background-color: #5bc85b;
+  color: white;
+  text-align: center;
+  display: flex;
+  /*justify-content mueve le contenido horizontalmente*/
+  justify-content: center;
+  /*margin top auto mueve el footer al pie de pagina */
+  margin-top: auto;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Aplicando el modelo de cajas busco patrones para ordenar el body */
+/* Ajustamos el contenido de la pagina */
+/* Podemos definir el body en su conjunto como un modelo de 3 cajas */
+.contenidoPagina {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin: 10px;
+  flex-grow: 1; /*Se expande para ocupar el espacio vertical restante*/
+}
+
+/* Ajustamos el contenido del texto principal*/
+.textoPrincipal {
+  font-family: Roboto, sans-serif;
+  padding: 10px;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px/* Espacio vertical */
+}
+
+.textoPrincipal div:first-child {
+  margin-bottom: 50px;
+}
+
+p {
+  /*text-indent: 2em;*/ /*Ajusta la medida del indentado en funcion de el tamaño de la accion "tab" que le metemos al parrafo*/
+  line-height: 2.5; /*Establece un margen entre el mismo parrafo por si el texto ocupa dos o más líneas. Hace que haya un margen vertical*/
+  justify-content: left;
+}
+
+/*menu izquierdo*/
+.menuIzq {
+  width: 20%;
+  background-color: #f3f3f3;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  border: 4px solid black;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  position: relative;
+  font-family: Calibri, sans-serif;
+  height: 60px;
+  overflow: hidden;
+}
+
+/* Ajustamos el color negro a todos los atributos que tengan a en la clase menu.item*/
+/* Hacemos que sea clickeable en toda su tarjeta ajustando la posicion absolute en el atributo a de la clase menu.item. a Luego ajustaremos position relative en la clase menu.item general.  */
+/* Ajustamos el inset al valor 0 para evitar que el contenido se desorganice */
+.menu-item a {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+}
+
+
+/* ponemos dos puntos en el menu.item hover para que se resalte si pones el mouse encima */
+.menu-item:hover {
+  background-color: gray;
+}
+
+.botonText {
+
+  width: 50%;          /* Ajusta el ancho del contenedor */
+  height: 50%;         /* Ajusta la altura del contenedor */
+  margin: auto;        /* Centro horizontal y vertical */
+  position: absolute;  /* Necesario para el centrado vertical */
+  top: 0; bottom: 0;   /* Espaciado para el centrado vertical */
+  left: 0; right: 0;   /* Espaciado para el centrado horizontal */
+}
+
+
+/* la id q es la # le añadimos el hover para que si ponemos el mouse encima el background cambie*/
+#otros:hover {
+  background-color: #d3c5c5;
+}
+
+#otros {
+  background-color: red;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
