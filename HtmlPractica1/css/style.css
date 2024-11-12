@@ -5,6 +5,7 @@
   color: white;
   text-align: center;
 }
+
 /* Estilos del Footer */
 .footer {
   background-color: #5bc85b;
@@ -41,14 +42,16 @@
   font-size: 1.2em;
   margin: 0;
 }
+
 /*menu izquierdo*/
-.menuIzq{
+.menuIzq {
   width: 20%;
   background-color: #f3f3f3;
   padding: 15px;
   display: flex;
   flex-direction: column;
 }
+
 .menu-item {
   display: block;
   padding: 10px;
@@ -57,9 +60,23 @@
   border: 3px solid black;
   text-align: center;
   transition: background-color 0.3s ease;
+  position: relative;
+
 }
+
+/* Ajustamos el color negro a todos los atributos que tengan a en la clase menu.item*/
+/* Hacemos que sea clickeable en toda su tarjeta ajustando la posicion absoluta en el atributo a de la clase menu.item. Luego ajustaremos position relative en la clase menu.item general */
+/* Ajustamos el inset al valor 0 para evitar que el contenido se desorganice */
+.menu-item a {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  inset: 0;
+}
+
+
 /* ponemos dos puntos en el menu.item hover para que se resalte si pones el mouse encima */
-.menu-item:hover{
+.menu-item:hover {
   background-color: gray;
   color: black;
 }
