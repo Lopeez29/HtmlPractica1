@@ -42,15 +42,17 @@
   font-size: 1.2em;
   margin: 0;
 }
-/*Body del medio*/
-/* Aplicando el modelo de cajas busco patrones para ordenar el body*/
-/* Ajustamos el contenido de la pagina*/
+
+/* Aplicando el modelo de cajas busco patrones para ordenar el body */
+/* Ajustamos el contenido de la pagina */
+/* Podemos definir el body en su conjunto como un modelo de 3 cajas */
 .contenidoPagina {
   display: flex;
   gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
   margin: 10px;
 }
+
 /* Ajustamos el contenido del texto principal*/
 .textoPrincipal {
   font-family: Roboto, sans-serif;
@@ -62,11 +64,13 @@
   align-items: center;
   justify-content: center;
 }
+
 /*margen entre parrafos*/
 .textoPrincipal p {
   margin: 0 auto;
 
 }
+
 /*menu izquierdo*/
 .menuIzq {
   width: 20%;
