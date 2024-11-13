@@ -76,7 +76,7 @@ body, html {
   align-items: flex-start;
   gap: 20px/* Espacio vertical */
 }
-
+/* Escoge el primer hijo de la pseudoclase (es decir, el articulo 1) y establece un margen debajo para abrir una separacion entre ambos articulos*/
 .textoPrincipal div:first-child {
   margin-bottom: 50px;
 }
