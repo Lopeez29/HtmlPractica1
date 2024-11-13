@@ -3,8 +3,9 @@ body, html {
   height: 100%;
   margin: 0;
 }
+
 .main-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -64,21 +65,52 @@ body, html {
   flex-grow: 1; /*Se expande para ocupar el espacio vertical restante*/
 }
 
-/* Ajustamos el contenido del texto principal*/
+/* Reset general para eliminar cualquier margen o padding predeterminado */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ajustes de .textoPrincipal para centrar y alinear el contenido */
 .textoPrincipal {
   font-family: Roboto, sans-serif;
-  padding: 10px;
+  padding: 0; /* Asegúrate de que no haya padding en .textoPrincipal */
   width: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px/* Espacio vertical */
+  align-items: center; /* Centra los div horizontalmente */
+  justify-content: center; /* Centra los div verticalmente */
+  gap: 20px;
+  background-color: #63e8e8;
+  height: 100vh;
+}
+
+/* Alineación interna de los divs */
+.textoPrincipal div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea el contenido del div a la izquierda */
+  text-align: left;
+  width: 100%; /* Asegura que el div ocupe el ancho completo */
+  padding: 0 10px; /* Opcional: ajusta este padding según necesites */
+}
+
+/* Estilos específicos para los títulos y párrafos */
+.textoPrincipal div h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+}
+
+.textoPrincipal div p {
+  margin: 0;
+  line-height: 1.6;
 }
 /* Escoge el primer hijo de la pseudoclase (es decir, el articulo 1) y establece un margen debajo para abrir una separacion entre ambos articulos*/
 .textoPrincipal div:first-child {
   margin-bottom: 50px;
+
 }
 
 p {
@@ -133,15 +165,47 @@ p {
 
 .botonText {
 
-  width: 50%;          /* Ajusta el ancho del contenedor */
-  height: 50%;         /* Ajusta la altura del contenedor */
-  margin: auto;        /* Centro horizontal y vertical */
-  position: absolute;  /* Necesario para el centrado vertical */
-  top: 0; bottom: 0;   /* Espaciado para el centrado vertical */
-  left: 0; right: 0;   /* Espaciado para el centrado horizontal */
+  width: 50%; /* Ajusta el ancho del contenedor */
+  height: 50%; /* Ajusta la altura del contenedor */
+  margin: auto; /* Centro horizontal y vertical */
+  position: absolute; /* Necesario para el centrado vertical */
+  top: 0;
+  bottom: 0; /* Espaciado para el centrado vertical */
+  left: 0;
+  right: 0; /* Espaciado para el centrado horizontal */
+}
+.comparador{
+  background-color: #fdf4e6;
+  font-family: Roboto, sans-serif;
+}
+.articulos {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-direction: column;
+
 }
 
+.articulo1 {
+  border: 2px solid #888888;
+}
 
+.articulo2 {
+  border: 2px solid #888888;
+}
+
+/*
+.articulos div:first-child {
+  display: flex;
+  flex-direction: column;
+  border: gray 2px solid;
+}
+.articulos div:last-child {
+  display: flex;
+  flex-direction: column;
+  border: gray 2px solid;
+
+}*/
 /* la id q es la # le añadimos el hover para que si ponemos el mouse encima el background cambie*/
 #otros:hover {
   background-color: #d3c5c5;
