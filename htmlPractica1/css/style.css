@@ -19,24 +19,49 @@ body, html {
   color: white;
   padding: 10px 20px;
   font-family: 'Roboto', sans-serif;
+  gap: 20px;
 }
 
+/* Estilo para el título principal */
+.header h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+/* Contenedor de nombres en el Header */
 .nombresHeader {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 90vh; /*margen de separacion horizontal*/
-
+  gap: 20px; /* Espacio entre los nombres */
+  flex: 1;
 }
 
+/* Estilos para los nombres individuales */
 .nombresHeader h2, .nombresHeader h1 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: normal;
   white-space: nowrap;
+  text-align: center; /* Centra los nombres */
 }
 
-.header h1 {
-  font-size: 1.2em;
-  margin: 0;
+/* Estilo de la imagen (representada en la imagen proporcionada) */
+.imagenHeader {
+  width: 100px; /* Tamaño de la imagen */
+  height: 100px;
+  background-color: #3a82f7; /* Color de fondo de la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  flex: 0 100 150px; /* Tamaño fijo de la "imagen" */
+  text-align: center;
+  border: 2px solid #000; /* Borde alrededor de la imagen */
 }
 
 /* Estilos del Footer */
@@ -90,10 +115,10 @@ body, html {
 .textoPrincipal div {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea el contenido del div a la izquierda */
+  align-items: flex-start;
   text-align: left;
-  width: 100%; /* Asegura que el div ocupe el ancho completo */
-  padding: 0 10px; /* Opcional: ajusta este padding según necesites */
+  width: 100%;
+  padding: 0 10px;
 }
 
 /* Estilos específicos para los títulos y párrafos */
@@ -107,6 +132,7 @@ body, html {
   margin: 0;
   line-height: 1.6;
 }
+
 /* Escoge el primer hijo de la pseudoclase (es decir, el articulo 1) y establece un margen debajo para abrir una separacion entre ambos articulos*/
 .textoPrincipal div:first-child {
   margin-bottom: 50px;
@@ -119,44 +145,53 @@ p {
   justify-content: left;
 }
 
-/*menu izquierdo*/
+
+/* Contenedor del menú izquierdo */
 .menuIzq {
-  width: 20%;
+  width: 20%; /* Ocupa un 20% del ancho total */
   background-color: #f3f3f3;
   padding: 15px;
   display: flex;
   flex-direction: column;
-
+  align-items: center; /* Centra los botones horizontalmente */
+  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
 }
 
+/* Estilos para el título del examen */
+.titulo-examen {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 100px; /* Empuja las tarjetas hacia abajo */
+}
+
+/* Estilos de los botones */
 .menu-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  margin: 5px;
-  text-decoration: none;
-  border: 4px solid black;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  position: relative;
-  font-family: Calibri, sans-serif;
-  height: 60px;
+  width: 90%; /* Mantiene el ancho del botón sin expandirse */
+  height: 60px; /* Tamaño fijo del botón */
+  margin: 10px 0; /* Añade un margen de 10px entre cada botón */
+  border: 2px solid black;
+  background-color: white;
   overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 
-/* Ajustamos el color negro a todos los atributos que tengan a en la clase menu.item*/
-/* Hacemos que sea clickeable en toda su tarjeta ajustando la posicion absolute en el atributo a de la clase menu.item. a Luego ajustaremos position relative en la clase menu.item general.  */
-/* Ajustamos el inset al valor 0 para evitar que el contenido se desorganice */
+/* Enlace dentro del botón */
 .menu-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ocupa el ancho del botón */
+  height: 100%; /* Ocupa la altura del botón */
   color: black;
   text-decoration: none;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  inset: 0;
+  font-family: Calibri, sans-serif;
 }
-
 
 /* ponemos dos puntos en el menu.item hover para que se resalte si pones el mouse encima */
 .menu-item:hover {
@@ -169,29 +204,72 @@ p {
   height: 50%; /* Ajusta la altura del contenedor */
   margin: auto; /* Centro horizontal y vertical */
   position: absolute; /* Necesario para el centrado vertical */
-  top: 0;
+  top: 0; /*mantiene el texto en su sitio*/
   bottom: 0; /* Espaciado para el centrado vertical */
-  left: 0;
   right: 0; /* Espaciado para el centrado horizontal */
 }
-.comparador{
-  background-color: #fdf4e6;
+
+/* Contenedor principal de comparación */
+.comparador {
+  width: 56%; /* Ajusta el ancho según sea necesario */
+  background-color: #fdf4e6; /* Fondo similar a la imagen */
   font-family: Roboto, sans-serif;
-}
-.articulos {
+  padding: 20px;
   display: flex;
-  justify-content: flex-start;
-  flex-grow: 1;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative; /* Asegura que el contenedor no se desborde */
+  top: 0;
+  right: 0;
+  height: 100vh; /* Para ocupar toda la altura de la pantalla */
+  box-sizing: border-box; /* Asegura que el padding no expanda el ancho */
+}
+
+/* Estilos para los títulos */
+.comparador h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.comparador h3 {
+
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  font-size: 1.2em;
 
 }
 
-.articulo1 {
-  border: 2px solid #888888;
+/* Contenedor de artículos */
+.articulos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los artículos */
+  align-items: center;
+  margin-bottom: auto;
+  margin-top: auto;
+
+
 }
 
-.articulo2 {
-  border: 2px solid #888888;
+/* Estilos individuales para cada artículo */
+.articulo {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.9em;
+  width: 100%;
+}
+.articulo:hover {
+  background-color: #f3f3f3;
 }
 
 /*
