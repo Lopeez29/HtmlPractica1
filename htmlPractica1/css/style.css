@@ -53,15 +53,12 @@ body, html {
 .imagenHeader {
   width: 100px; /* Tamaño de la imagen */
   height: 100px;
-  background-color: #3a82f7; /* Color de fondo de la imagen */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: bold;
   flex: 0 100 150px; /* Tamaño fijo de la "imagen" */
-  text-align: center;
   border: 2px solid #000; /* Borde alrededor de la imagen */
+  background-color: white; /* Fondo blanco */
 }
 
 /* Estilos del Footer */
@@ -136,7 +133,6 @@ body, html {
 /* Escoge el primer hijo de la pseudoclase (es decir, el articulo 1) y establece un margen debajo para abrir una separacion entre ambos articulos*/
 .textoPrincipal div:first-child {
   margin-bottom: 50px;
-
 }
 
 p {
@@ -144,7 +140,6 @@ p {
   line-height: 2.5; /*Establece un margen entre el mismo parrafo por si el texto ocupa dos o más líneas. Hace que haya un margen vertical*/
   justify-content: left;
 }
-
 
 /* Contenedor del menú izquierdo */
 .menuIzq {
@@ -173,7 +168,7 @@ p {
   justify-content: center;
   width: 90%; /* Mantiene el ancho del botón sin expandirse */
   height: 60px; /* Tamaño fijo del botón */
-  margin: 10px 0; /* Añade un margen de 10px entre cada botón */
+  margin: 10px 0;
   border: 2px solid black;
   background-color: white;
   overflow: hidden;
@@ -243,7 +238,6 @@ p {
   margin-top: 50px;
   width: 100%;
   font-size: 1.2em;
-
 }
 
 /* Contenedor de artículos */
@@ -255,8 +249,6 @@ p {
   align-items: center;
   margin-bottom: auto;
   margin-top: auto;
-
-
 }
 
 /* Estilos individuales para cada artículo */
@@ -268,22 +260,11 @@ p {
   font-size: 0.9em;
   width: 100%;
 }
+
 .articulo:hover {
   background-color: #f3f3f3;
 }
 
-/*
-.articulos div:first-child {
-  display: flex;
-  flex-direction: column;
-  border: gray 2px solid;
-}
-.articulos div:last-child {
-  display: flex;
-  flex-direction: column;
-  border: gray 2px solid;
-
-}*/
 /* la id q es la # le añadimos el hover para que si ponemos el mouse encima el background cambie*/
 #otros:hover {
   background-color: #d3c5c5;
